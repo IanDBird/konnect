@@ -52,7 +52,6 @@ class KonnectClient:
             print('Status Code: ' + str(response.status_code))
             return devices
 
-        #{"devices":[{"addressCountry":"GB","cfgCTConfig":1,"currency":"GBP","evseFwVersion":"5.8","friendlyName":"Home","id":"e00fce6891a6d30340b9aaab","name":"2202212993","sysFwVersion":287,"userLock":false}]}
         response_body = response.json()
         
         # Log Devices

@@ -46,8 +46,6 @@ class KonnectDevice:
         if response.status_code != 200:
             return None
 
-        #{"data":{"getDevice":{"id":"e00fce6891a6d30340b9aaab","deviceCalculatedChargeLogs":[{"chargeCostTotal":1.5388615200000015,"chargeEnergyTotal":5.495933999999999,"deviceId":"e00fce6891a6d30340b9aaab","duration":2764,"gridCostTotal":0,"gridEnergyTotal":0,"particleFwVersion":null,"solarEnergyTotal":0,"solarCostTotal":0,"startDateTimeLocal":"2022-07-23T10:20:42+01:00","surplusUsedCostTotal":1.5388615200000015,"surplusUsedEnergyTotal":5.495933999999999,"uuid":"e00fce6891a6d30340b9aaab_2022-07-23T09:20:42Z","__typename":"DeviceCalculatedChargeLog"}],"__typename":"Device"}}}
-
         response_body = response.json()
         device_logs = response_body['data']['getDevice']['deviceCalculatedChargeLogs']
         if len(device_logs) == 0:
